@@ -1,0 +1,157 @@
+/* Why Choose Us section styling */
+.why-section {
+  padding: 6rem 0;
+  position: relative;
+  background-color: var(--bg-white);
+}
+
+.why-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.why-img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 0.95;
+  position: relative;
+}
+
+.why-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating Uptime Card overlay */
+.floating-card-uptime {
+  position: absolute;
+  bottom: 8%;
+  left: -8%;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.uptime-icon-box {
+  width: 38px;
+  height: 38px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.uptime-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.uptime-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  line-height: 1;
+}
+
+.uptime-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Why Choose Us list items */
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.why-list-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.why-list-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.why-list-item:hover .why-list-icon {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  transform: scale(1.08);
+}
+
+.why-list-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.35rem;
+}
+
+.why-list-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Hover effect on floatings */
+.why-image-wrapper:hover .floating-card-uptime {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Responsive screens Mobiles Tabs */
+@media (max-width: 1199.98px) {
+  .floating-card-uptime {
+    left: -3%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .why-image-wrapper {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .floating-card-uptime {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .why-img-container {
+    aspect-ratio: auto;
+    height: 280px;
+  }
+}

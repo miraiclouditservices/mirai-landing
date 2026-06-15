@@ -1,0 +1,315 @@
+/* Hero section styling */
+.hero-section {
+  position: relative;
+  padding: 6rem 0 5rem 0;
+  background-color: var(--bg-white);
+  overflow: hidden;
+}
+
+/* Subtle grid pattern background */
+.hero-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Content Column */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+  0% { transform: scale(0.9); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0.9); }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--slate-900);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.hero-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--slate-900);
+}
+
+.hero-feature-item i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+/* Right Media Column */
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.hero-img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1.05;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating Status Cards */
+.floating-card-security {
+  position: absolute;
+  top: 6%;
+  right: -5%;
+  background: rgba(11, 25, 44, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 1.1rem;
+  border-radius: 10px;
+  color: var(--bg-white);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+
+.floating-card-security i {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.floating-card-security span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.floating-card-status {
+  position: absolute;
+  bottom: 8%;
+  left: -8%;
+  background: rgba(11, 25, 44, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.1rem 1.25rem;
+  border-radius: 10px;
+  color: var(--bg-white);
+  width: 290px;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+
+.floating-card-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.status-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+}
+
+.status-pulse-wrapper {
+  background: rgba(16, 185, 129, 0.12);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% { transform: scale(0.9); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0.9); }
+}
+
+.status-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.status-progress-bar {
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.status-progress-fill {
+  height: 100%;
+  background-color: var(--accent-emerald);
+  width: 99.99%;
+  border-radius: 10px;
+}
+
+.status-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.status-uptime-val {
+  color: var(--accent-emerald);
+  font-weight: 700;
+}
+
+/* Hover effect on floatings */
+.hero-image-wrapper:hover .floating-card-security {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.hero-image-wrapper:hover .floating-card-status {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Responsive screens Mobiles Tabs */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 2.85rem;
+  }
+  .floating-card-security {
+    right: -2%;
+  }
+  .floating-card-status {
+    left: -2%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 4rem 0 3rem 0;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-image-wrapper {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .floating-card-security {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .floating-card-status {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .hero-img-container {
+    aspect-ratio: auto;
+    height: 300px;
+  }
+  .hero-features {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

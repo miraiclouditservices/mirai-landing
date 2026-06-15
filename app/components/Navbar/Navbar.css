@@ -1,0 +1,118 @@
+/* Navbar custom styles */
+.mirai-navbar {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 0;
+  transition: var(--transition-smooth);
+}
+
+.mirai-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.mirai-logo-icon {
+  background-color: #0c5adb;
+  color: var(--bg-white);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.mirai-logo-icon i.bi-gear-fill {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
+  background: #0c5adb;
+  border-radius: 50%;
+  padding: 1px;
+  animation: logo-spin 10s linear infinite;
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mirai-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mirai-logo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  line-height: 1.1;
+}
+
+.mirai-logo-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.mirai-nav-link {
+  font-weight: 500;
+  color: var(--text-main) !important;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem !important;
+  transition: var(--transition-smooth);
+}
+
+.mirai-nav-link:hover, 
+.mirai-nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.btn-quote {
+  background-color: var(--dark-navy);
+  color: var(--bg-white);
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--dark-navy);
+  transition: var(--transition-smooth);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+}
+
+.btn-quote:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-white);
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustment */
+@media (max-width: 991.98px) {
+  .mirai-navbar {
+    padding: 0.5rem 0;
+  }
+  .mirai-nav-links-container {
+    padding: 1rem 0;
+  }
+  .mirai-nav-link {
+    padding: 0.5rem 0 !important;
+  }
+  .btn-quote {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

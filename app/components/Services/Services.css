@@ -1,0 +1,114 @@
+/* Services section styling */
+.services-section {
+  background-color: var(--bg-light);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.services-grid {
+  margin-top: 3.5rem;
+}
+
+/* Service Card styling */
+.service-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2.5rem 2.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--bg-white) 0%, rgba(12, 90, 219, 0.02) 100%);
+}
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+.service-icon-box {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(12, 90, 219, 0.08) 0%, rgba(12, 90, 219, 0.02) 100%);
+  color: var(--primary-color);
+  border: 1px solid rgba(12, 90, 219, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.75rem;
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.85rem;
+}
+
+.service-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 2rem;
+}
+
+.service-card-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: var(--transition-smooth);
+  margin-top: auto;
+}
+
+.service-card-link i {
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.service-card:hover .service-card-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-white);
+  transform: scale(1.05);
+}
+
+.service-card:hover .service-card-link i {
+  transform: translate(1px, -1px);
+}
