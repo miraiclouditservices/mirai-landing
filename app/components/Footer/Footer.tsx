@@ -40,10 +40,10 @@ export default function Footer() {
             <div className="col-sm-6 col-md-4 col-lg-2 footer-col">
               <h4 className="footer-col-title">Company</h4>
               <ul className="footer-links">
-                <li><Link href="#home">Home</Link></li>
-                <li><Link href="#services">Services</Link></li>
-                <li><Link href="#industries">Industries</Link></li>
-                <li><Link href="#about">About Us</Link></li>
+                <li><Link href="/#home">Home</Link></li>
+                <li><Link href="/#services">Services</Link></li>
+                <li><Link href="/#industries">Industries</Link></li>
+                <li><Link href="/#about">About Us</Link></li>
               </ul>
             </div>
 
@@ -51,10 +51,10 @@ export default function Footer() {
             <div className="col-sm-6 col-md-4 col-lg-3 footer-col">
               <h4 className="footer-col-title">Solutions</h4>
               <ul className="footer-links">
-                <li><Link href="#services">Cloud Services</Link></li>
-                <li><Link href="#services">Cybersecurity</Link></li>
-                <li><Link href="#services">Network Infrastructure</Link></li>
-                <li><Link href="#services">Managed IT Support</Link></li>
+                <li><Link href="/#services">Cloud Services</Link></li>
+                <li><Link href="/#services">Cybersecurity</Link></li>
+                <li><Link href="/services/network-infrastructure">Network Infrastructure</Link></li>
+                <li><Link href="/#services">Managed IT Support</Link></li>
               </ul>
             </div>
 
