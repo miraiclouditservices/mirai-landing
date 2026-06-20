@@ -1,0 +1,585 @@
+/* Network Infrastructure Page Styling */
+.net-infra-page {
+  background-color: var(--bg-white);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Grid & glow backgrounds */
+.net-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.net-glow-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-glow) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero Section */
+.net-hero {
+  padding: 8rem 0 6rem 0;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.net-hero-subtitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.net-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--slate-900);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.net-hero-desc {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+}
+
+.btn-net-explore {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  border: none;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-net-explore:hover {
+  background-color: var(--primary-hover);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+.net-hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.net-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--slate-900);
+}
+
+.net-feature-item i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+/* Hero Right: Image & Status Card */
+.net-hero-right {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.net-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.net-main-img {
+  object-fit: cover;
+}
+
+/* Status Card (translucent dark navy, consistent with homepage style) */
+.net-status-card {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 280px;
+  background: rgba(11, 25, 44, 0.85); /* var(--dark-navy) translucent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+.net-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.net-status-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+}
+
+.net-status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald);
+  display: inline-block;
+  animation: pulse-emerald 2s infinite;
+}
+
+@keyframes pulse-emerald {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.net-status-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--bg-white);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.net-status-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+.net-status-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 35px;
+}
+
+.net-chart-bar {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  transition: height 0.5s ease;
+}
+
+.net-chart-bar.highlight {
+  background-color: var(--accent-emerald);
+}
+
+/* Sections */
+.net-section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.net-section-light {
+  background-color: var(--bg-light);
+}
+
+.net-section-white {
+  background-color: var(--bg-white);
+}
+
+.net-section-subtitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.net-section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.net-section-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Service Card List */
+.net-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  overflow: hidden;
+  position: relative;
+}
+
+.net-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: var(--transition-smooth);
+}
+
+.net-card-img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.net-card-img {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.net-card:hover .net-card-img {
+  transform: scale(1.08);
+}
+
+.net-card-body {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.net-card-meta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.net-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.85rem;
+}
+
+.net-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 2rem;
+}
+
+.net-card-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: var(--transition-smooth);
+  margin-top: auto;
+}
+
+.net-card-arrow i {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.net-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--bg-white) 0%, rgba(12, 90, 219, 0.02) 100%);
+}
+
+.net-card:hover::after {
+  width: 100%;
+}
+
+.net-card:hover .net-card-arrow {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.net-card:hover .net-card-arrow i {
+  transform: translate(1px, -1px);
+}
+
+/* How We Work Section */
+.net-work-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.net-step-item {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.net-step-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.net-step-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(12, 90, 219, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--primary-light);
+}
+
+.net-step-content {
+  flex-grow: 1;
+}
+
+.net-step-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.5rem;
+}
+
+.net-step-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* FAQ Accordion Styling (Light, matching home styles) */
+.net-faqs-container {
+  max-width: 800px;
+  margin: 3rem auto 0 auto;
+}
+
+.net-faq-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+
+.net-faq-item:hover {
+  border-color: rgba(12, 90, 219, 0.25);
+}
+
+.net-faq-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 1.5rem;
+}
+
+.net-faq-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--slate-900);
+  margin: 0;
+  transition: var(--transition-smooth);
+}
+
+.net-faq-item.active .net-faq-question {
+  color: var(--primary-color);
+}
+
+.net-faq-toggle {
+  width: 28px;
+  height: 28px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.net-faq-item.active .net-faq-toggle {
+  transform: rotate(45deg);
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.net-faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.net-faq-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Call to Action Banner */
+.net-cta-wrapper {
+  margin-top: 2rem;
+}
+
+.net-cta-card {
+  background-color: var(--accent-emerald-light);
+  color: var(--slate-900);
+  border-radius: 12px;
+  padding: 3.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.net-cta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-emerald);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  display: inline-block;
+}
+
+.net-cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.net-cta-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.btn-net-cta {
+  background-color: var(--dark-navy);
+  color: var(--bg-white);
+  border: none;
+  font-weight: 700;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-net-cta:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  transform: scale(1.05);
+}
+
+.btn-net-cta i {
+  font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .net-hero {
+    padding-top: 6rem;
+  }
+  .net-hero-title {
+    font-size: 2.75rem;
+  }
+  .net-img-wrapper {
+    height: 380px;
+    margin-top: 3rem;
+  }
+  .net-status-card {
+    left: 20px;
+    bottom: -20px;
+  }
+  .net-cta-card {
+    padding: 2.5rem;
+  }
+  .btn-net-cta {
+    margin-top: 1.5rem;
+  }
+}

@@ -42,27 +42,27 @@ export default function Navbar() {
         >
           <ul className="navbar-nav mx-auto mirai-nav-links-container">
             <li className="nav-item">
-              <Link href="#home" className="nav-link mirai-nav-link active" onClick={() => setIsOpen(false)}>
+              <Link href="/#home" className="nav-link mirai-nav-link active" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#services" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
+              <Link href="/#services" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
                 Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#industries" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
+              <Link href="/#industries" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
                 Industries
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#about" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
+              <Link href="/#about" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
                 About Us
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#contact" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
+              <Link href="/#contact" className="nav-link mirai-nav-link" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
             </li>
@@ -70,7 +70,7 @@ export default function Navbar() {
 
           {/* Action Button */}
           <div className="d-flex align-items-center">
-            <Link href="#contact" className="btn-quote" onClick={() => setIsOpen(false)}>
+            <Link href="/#contact" className="btn-quote" onClick={() => setIsOpen(false)}>
               Get a Quote <i className="bi bi-arrow-up-right"></i>
             </Link>
           </div>
