@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,10 +17,8 @@ export default function Footer() {
 
             {/* Column 1: Brand Info & Left-aligned Socials */}
             <div className="col-lg-4 footer-col">
-              <Link href="/" className="footer-logo-container">
-                <div className="footer-logo-icon">
-                  <i className="bi bi-cloud-fill"></i>
-                </div>
+              <Link href="/" className="footer-logo-container d-flex align-items-center gap-2 mb-3 text-decoration-none">
+                <Image src="/mirai_logo.png" alt="Mirai Cloud Logo" width={50} height={50} />
                 <div>
                   <span className="footer-logo-title d-block">Mirai Cloud</span>
                   <span className="footer-logo-subtitle d-block">IT SERVICES</span>
@@ -30,9 +29,10 @@ export default function Footer() {
               </p>
 
               <div className="social-links justify-content-start mt-4">
-                <a href="#" className="social-btn" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" className="social-btn" aria-label="Twitter/X"><i className="bi bi-twitter-x"></i></a>
-                <a href="#" className="social-btn" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/mirai-cloud-it-services/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/miraicloud_itservices?igsh=MTRqczhxYjFyemx3bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/share/17DCngKdER/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+                <a href="https://whatsapp.com/channel/0029Vb5ZMnB8fewwm8tvFk2c" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="WhatsApp"><i className="bi bi-whatsapp"></i></a>
               </div>
             </div>
 
@@ -63,19 +63,19 @@ export default function Footer() {
               <h4 className="footer-col-title">Get in touch</h4>
               <div className="footer-contact-item">
                 <i className="bi bi-envelope"></i>
-                <a href="mailto:hello@miraicloud.in" className="text-decoration-none" style={{ color: "#94a3b8" }}>
-                  hello@miraicloud.in
+                <a href="mailto:info@miraiclouditservices.com" className="text-decoration-none" style={{ color: "#94a3b8" }}>
+                  info@miraiclouditservices.com
                 </a>
               </div>
               <div className="footer-contact-item">
                 <i className="bi bi-telephone"></i>
-                <a href="tel:+919876543210" className="text-decoration-none" style={{ color: "#94a3b8" }}>
-                  +91 98765 43210
+                <a href="tel:+919100218218" className="text-decoration-none" style={{ color: "#94a3b8" }}>
+                  +91 91002 18218
                 </a>
               </div>
-              <div className="footer-contact-item">
-                <i className="bi bi-geo-alt"></i>
-                <span>Hyderabad, Telangana, India</span>
+              <div className="footer-contact-item d-flex align-items-start gap-2">
+                <i className="bi bi-geo-alt mt-1"></i>
+                <span style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: "1.4" }}>Kalki chambers A Block 108, NH 65, widia colony Miyapur, Hyderabad, India, 502032</span>
               </div>
             </div>
 

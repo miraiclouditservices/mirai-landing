@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +11,8 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg sticky-top mirai-navbar">
       <div className="container">
         {/* Brand Logo */}
-        <Link href="/" className="mirai-navbar-brand">
-          <div className="mirai-logo-icon">
-            <i className="bi bi-cloud-fill"></i>
-            <i className="bi bi-gear-fill"></i>
-          </div>
+        <Link href="/" className="mirai-navbar-brand d-flex align-items-center gap-2">
+          <Image src="/mirai_logo.png" alt="Mirai Cloud Logo" width={45} height={45} />
           <div className="mirai-logo-text">
             <span className="mirai-logo-title">Mirai Cloud</span>
             <span className="mirai-logo-subtitle">IT SERVICES</span>
