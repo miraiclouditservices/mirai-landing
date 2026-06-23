@@ -84,8 +84,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/mirai_logo.png', type: 'image/png' },
+      { url: '/icon.png', type: 'image/png' },
     ],
     apple: [
       { url: '/mirai_logo.png' },
