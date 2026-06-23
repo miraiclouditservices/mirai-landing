@@ -82,6 +82,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Mirai Cloud IT Services",
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/mirai_logo.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/mirai_logo.png' },
+    ],
+  },
 };
 
 export default function RootLayout({
