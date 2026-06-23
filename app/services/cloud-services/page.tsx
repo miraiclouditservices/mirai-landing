@@ -157,12 +157,12 @@ export default function CloudServices() {
               <div className="col-lg-6">
                 <div className="cloud-hero-right">
                   <div className="cloud-illustration-box">
-                    <Image 
-                      src="/images/services/hero_cloud_1781975015296.png" 
-                      width={400} height={400} 
-                      alt="Cloud Services" 
-                      className="img-fluid position-relative z-1" 
-                      style={{ borderRadius: "24px", boxShadow: "0 25px 50px rgba(0,0,0,0.3)" }} 
+                    <Image
+                      src="/images/services/hero_cloud_1781975015296.png"
+                      width={400} height={400}
+                      alt="Cloud Services"
+                      className="img-fluid position-relative z-1"
+                      style={{ borderRadius: "24px", boxShadow: "0 25px 50px rgba(0,0,0,0.3)" }}
                     />
 
 

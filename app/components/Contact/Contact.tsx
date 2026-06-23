@@ -12,12 +12,29 @@ export default function Contact() {
   });
   
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Simulate API request
-    setSubmitted(true);
-    setTimeout(() => {
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          subject: `Mirai Cloud Consultation: ${formData.service}`,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitted(true);
       setFormData({
         name: "",
         email: "",
@@ -25,8 +42,12 @@ export default function Contact() {
         service: "Cloud Services",
         message: "",
       });
-      setSubmitted(false);
-    }, 4000);
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err) {
+      setError("There was an issue sending your message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -106,16 +127,8 @@ export default function Contact() {
                 Share a few details and we&apos;ll get back to you shortly.
               </p>
               
-              {submitted ? (
-                <div className="alert alert-success d-flex align-items-center gap-2 py-3 px-4 border-0" style={{ borderRadius: "12px", backgroundColor: "var(--accent-emerald-light)", color: "var(--accent-emerald)" }} role="alert">
-                  <i className="bi bi-check-circle-fill fs-5"></i>
-                  <div>
-                    <strong>Thank you!</strong> Your message has been sent successfully. We will contact you soon.
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="row g-3">
+              <form onSubmit={handleSubmit}>
+                <div className="row g-3">
                     
                     {/* Your Name */}
                     <div className="col-md-6 form-group">
@@ -193,14 +206,23 @@ export default function Contact() {
                     
                     {/* Submit Button */}
                     <div className="col-12">
-                      <button type="submit" className="btn btn-primary-custom">
-                        Send Message <i className="bi bi-send-fill ms-2" style={{ fontSize: "0.85rem" }}></i>
+                      {error && <div className="text-danger mb-3" style={{ fontSize: "0.9rem" }}>{error}</div>}
+                      <button type="submit" className="btn btn-primary-custom" disabled={loading}>
+                        {loading ? "Sending..." : "Send Message"} {!loading && <i className="bi bi-send-fill ms-2" style={{ fontSize: "0.85rem" }}></i>}
                       </button>
+                      
+                      {submitted && (
+                        <div className="alert alert-success d-flex align-items-center gap-2 py-3 px-4 border-0 mt-4" style={{ borderRadius: "12px", backgroundColor: "var(--accent-emerald-light)", color: "var(--accent-emerald)" }} role="alert">
+                          <i className="bi bi-check-circle-fill fs-5"></i>
+                          <div>
+                            <strong>Thank you!</strong> Your message has been sent successfully. We will contact you soon.
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                   </div>
                 </form>
-              )}
             </div>
           </div>
 
